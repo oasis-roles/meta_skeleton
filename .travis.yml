@@ -17,3 +17,5 @@ script:
   - ansible-lint tasks/main.yml
   - flake8 $(find . -name '*.py')
 
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
