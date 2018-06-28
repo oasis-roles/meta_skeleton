@@ -11,6 +11,7 @@ install:
   - pip install -U pip
   - pip --version
   - pip install ansible ansible-lint yamllint flake8 molecule docker-py
+  - ansible --version
   - ansible-lint --version
   - yamllint --version
   - flake8 --version
