@@ -21,7 +21,7 @@ Currently the following variables are supported:
 
 ### General
 
-* `{{ role_name }}_var_name` - var_name description
+* `{{ role_name }}_var_name` - var\_name description
 
 Dependencies
 ------------
@@ -31,10 +31,10 @@ None
 Example Playbook
 ----------------
 
-```
+```yaml
 - hosts: {{ role_name }}-servers
   roles:
-    - role: {{ role_name }}
+    - role: oasis-roles.{{ role_name }}
 ```
 
 License
