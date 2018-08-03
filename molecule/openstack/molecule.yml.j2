@@ -21,6 +21,10 @@ scenario:
   name: openstack
 verifier:
   name: testinfra
+  options:
+    # Add a -v so you see the individual test names,
+    # particularly useful with parameterized tests
+    v: true
   lint:
     name: flake8
   directory: ../shared/
