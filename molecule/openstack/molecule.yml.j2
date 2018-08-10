@@ -23,5 +23,8 @@ verifier:
   name: testinfra
   lint:
     name: flake8
-  directory: ../shared/
-
+  # Using the shared directory is useful for sharing tests across scenarios,
+  # but is not a requirement. For scenario specific tests, add the appropriate
+  # file path to the test or test directory below
+  additional_files_or_dirs:
+    - ../shared/*
