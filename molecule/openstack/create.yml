@@ -14,8 +14,6 @@
       - ethertype: IPv4
       - ethertype: IPv6
 
-    neutron_network_name: "{{ lookup('env', 'OS_NETWORK') }}"
-
     keypair_name: molecule_key
     keypair_path: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/ssh_key"
 
