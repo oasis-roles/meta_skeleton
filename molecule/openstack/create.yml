@@ -13,8 +13,6 @@
       - ethertype: IPv4
       - ethertype: IPv6
 
-    neutron_network_name: "{{ lookup('env', 'OS_NETWORK') }}"
-
     keypair_name: molecule_key
     keypair_path: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/ssh_key"
 
@@ -61,10 +59,6 @@
         mode: 0600
       when: keypair.changed
 
-    - name: Gather facts about network for use with instance creation
-      os_networks_facts:
-        name: "{{ neutron_network_name }}"
-
     - name: Create molecule instance(s)
       os_server:
         name: "{{ item.name }}"
@@ -72,8 +66,6 @@
         flavor: "{{ item.flavor }}"
         security_groups: "{{ security_group_name }}"
         key_name: "{{ keypair_name }}"
-        nics:
-          - net-id: "{{ openstack_networks[0]['id'] }}"
         delete_fip: true
       register: server
       with_items: "{{ molecule_yml.platforms }}"
