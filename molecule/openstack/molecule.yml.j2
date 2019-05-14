@@ -17,6 +17,7 @@ provisioner:
   playbooks:
     prepare: ../shared/prepare.yml
     converge: ../shared/playbook.yml
+    cleanup: ../shared/cleanup.yml
   config_options:
     defaults:
       stdout_callback: yaml
