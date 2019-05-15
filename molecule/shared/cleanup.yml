@@ -1,6 +1,5 @@
 - name: unregister systems
   hosts: all
-  gather_facts: false
   tasks:
     - block:
         - name: wait for host
