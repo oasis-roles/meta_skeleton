@@ -1,5 +1,7 @@
 dependency:
   name: galaxy
+  options:
+    role-file: molecule/shared/requirements.yml
 driver:
   name: docker
 lint:
@@ -22,6 +24,7 @@ provisioner:
   playbooks:
     prepare: ../shared/prepare.yml
     converge: ../shared/playbook.yml
+    cleanup: ../shared/cleanup.yml
   config_options:
     defaults:
       stdout_callback: yaml
