@@ -9,7 +9,7 @@
     rhsm_server_hostname: "{{ lookup('env', 'OASIS_RHSM_SERVER_HOSTNAME') }}"
     rhsm_pool_ids: "{{ lookup('env', 'OASIS_RHSM_POOL_IDS') }}"
     rhsm_repositories:
-      enable:
+      enabled:
         - rhel-7-server-rpms
         - rhel-7-server-extras-rpms
         - rhsl-7-server-optional-rpms
