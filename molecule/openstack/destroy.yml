@@ -5,5 +5,3 @@
   roles:
     - role: oasis_roles.molecule_openstack_ci
       molecule_openstack_ci_state: absent
-      molecule_openstack_ci_cloud: |-
-        {{ lookup('env', 'OS_CLOUD') | default('default', true) }}
