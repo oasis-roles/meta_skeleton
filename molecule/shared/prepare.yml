@@ -12,4 +12,4 @@
       enabled:
         - rhel-7-server-rpms
         - rhel-7-server-extras-rpms
-        - rhsl-7-server-optional-rpms
+        - rhel-7-server-optional-rpms
